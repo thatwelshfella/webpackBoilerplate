@@ -1,10 +1,10 @@
 import React from 'react';
-import FormComponent from './FormComponent';
+import './App.less'
 
 const App = () => {
   return (
     <div>
-      <FormComponent control="input" />
+      <h1>Boilerplate loaded successfully</h1>
     </div>
   );
 };
