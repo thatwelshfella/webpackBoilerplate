@@ -6,7 +6,7 @@ const HtmlWebpackPluginConfig = new HtmlWebpackPlugin({
 });
 
 module.exports = {
-  entry: "./src/Index.js",
+  entry: "./src/Index.jsx",
   module: {
     rules: [
       {
