@@ -1,14 +1,24 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const webpack = require('webpack');
+
 const HtmlWebpackPluginConfig = new HtmlWebpackPlugin({
   template: './dist/index.html',
   filename: 'index.html',
   inject: 'body',
+  favicon: './dist/favicon.ico',
 });
 
 module.exports = {
   entry: './src/Index.jsx',
-  module: {
+  mode: 'development',
+  target: 'web',
+  output: {
+    path: path.resolve(__dirname, 'build'),
+    publicPath: '/',
+    filename: 'bundle.js',
+  },
+ module: {
     rules: [
       {
         test: /\.(js|jsx)$/,
