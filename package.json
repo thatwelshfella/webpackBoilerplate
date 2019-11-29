@@ -4,6 +4,9 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
+    "enzyme": "^3.10.0",
+    "enzyme-adapter-react-16": "^1.15.1",
+    "jest": "^24.9.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "webpack": "^4.38.0",
@@ -21,9 +24,9 @@
     "webpack-dev-server": "^3.7.2"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack-dev-server --open --config=./config/webpack.config.js",
-    "build": "webpack --mode production"
+    "build": "webpack --mode production",
+    "test": "jest --watchAll --config=./jest.config.js"
   },
   "keywords": [],
   "author": "",
