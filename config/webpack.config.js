@@ -1,16 +1,14 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const webpack = require('webpack');
 
 const HtmlWebpackPluginConfig = new HtmlWebpackPlugin({
   template: './dist/index.html',
   filename: 'index.html',
   inject: 'body',
-  favicon: './dist/favicon.ico',
 });
 
 module.exports = {
-  entry: './src/Index.jsx',
+  entry: './src/index.jsx',
   mode: 'development',
   target: 'web',
   output: {
@@ -18,7 +16,11 @@ module.exports = {
     publicPath: '/',
     filename: 'bundle.js',
   },
- module: {
+  resolve: {
+    modules: ['src', 'node_modules'],
+    extensions: ['.js', '.jsx', '.less'],
+  },
+  module: {
     rules: [
       {
         test: /\.(js|jsx)$/,
@@ -27,17 +29,16 @@ module.exports = {
       },
       {
         test: /\.html$/,
+        exclude: /node_modules/,
         use: [{ loader: 'html-loader' }],
       },
       {
         test: /\.less$/,
+        exclude: /node_modules/,
         use: [
-          {
-            loader: 'less-loader',
-            options: {
-              paths: [path.resolve(__dirname, 'node_modules')],
-            },
-          },
+          { loader: 'style-loader' },
+          { loader: 'css-loader' },
+          { loader: 'less-loader' },
         ],
       },
     ],
