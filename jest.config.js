@@ -11,7 +11,7 @@ module.exports = {
     '!src/**/*.(test|spec).(js|jsx)',
     '!**/unit-tests/**',
     '!**/dist/**',
-    '!**/src/index.(js|jsx)',
+    '!**/src/Index.(js|jsx)',
     '!**/tests/**',
     '!**/assets/**',
   ],

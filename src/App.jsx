@@ -3,7 +3,7 @@ import './App.less'
 
 const App = () => {
   return (
-    <div>
+    <div className='app'>
       <h1>Boilerplate loaded successfully</h1>
     </div>
   );
