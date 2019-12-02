@@ -41,6 +41,11 @@ module.exports = {
           { loader: 'less-loader' },
         ],
       },
+      {
+        test: /\.png$/,
+        exclude: '/node_modules',
+        loader: 'url-loader',
+      },
     ],
   },
   plugins: [HtmlWebpackPluginConfig],

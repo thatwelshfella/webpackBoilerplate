@@ -11,7 +11,9 @@ module.exports = {
     '!src/**/*.(test|spec).(js|jsx)',
     '!**/unit-tests/**',
     '!**/dist/**',
-    '!**/src/Index.(js|jsx)',
+    '!**/src/index.(js|jsx)',
+    '!**/tests/**',
+    '!**/assets/**',
   ],
   coveragePathIgnorePatterns: ['/node_modules'],
   coverageThreshold: {
@@ -23,5 +25,11 @@ module.exports = {
     },
   },
   coverageDirectory: '<rootDir>/dashboard/unit-tests/',
-  displayName: { name: 'BoilerPlate', color: 'red' },
+  displayName: { name: 'boilerplate', color: 'red' },
+  moduleNameMapper: {
+    '\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$':
+      '<rootDir>/tests/fileMock.js',
+    '\\.(css|less)$': '<rootDir>/tests/styleMock.js',
+  },
+  snapshotSerializers: ['<rootDir>/node_modules/enzyme-to-json/serializer'],
 };
