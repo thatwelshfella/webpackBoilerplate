@@ -30,6 +30,9 @@
       }
     ],
     "import/order": 0,
-    "no-underscore-dangle": 0
+    "no-underscore-dangle": 0,
+    "no-plusplus": 0,
+    "react/jsx-props-no-spreading": 0,
+    "react/jsx-wrap-multilines": 0
   }
 }
