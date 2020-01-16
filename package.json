@@ -3,6 +3,11 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "scripts": {
+    "start": "webpack-dev-server --progress --config=./config/webpack.config.js",
+    "build": "webpack --mode production",
+    "test": "jest --watchAll --config=./jest.config.js"
+  },
   "dependencies": {
     "css-loader": "^3.2.0",
     "enzyme": "^3.10.0",
@@ -40,11 +45,7 @@
     "style-loader": "^1.0.1",
     "webpack-dev-server": "^3.7.2"
   },
-  "scripts": {
-    "start": "webpack-dev-server --open --config=./config/webpack.config.js",
-    "build": "webpack --mode production",
-    "test": "jest --watchAll --config=./jest.config.js"
-  },
+
   "keywords": [],
   "author": "",
   "license": "ISC"
