@@ -5,6 +5,7 @@ const HtmlWebpackPluginConfig = new HtmlWebpackPlugin({
   template: './dist/index.html',
   filename: 'index.html',
   inject: 'body',
+  publicPath:'/'
 });
 
 module.exports = {
@@ -15,6 +16,8 @@ module.exports = {
     path: path.resolve(__dirname, 'build'),
     publicPath: '/',
     filename: 'bundle.js',
+  },  devServer: {
+    contentBase: '../dist',
   },
   resolve: {
     modules: ['src', 'node_modules'],
