@@ -1,12 +1,13 @@
 import React from 'react';
-import './App.less'
+import { hot } from 'react-hot-loader/root';
+import './App.less';
 
 const App = () => {
   return (
-    <div className='app'>
+    <div className="app">
       <h1>Boilerplate loaded successfully</h1>
     </div>
   );
 };
 
-export default App;
+export default hot(App);
