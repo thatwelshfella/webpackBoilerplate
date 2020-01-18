@@ -29,18 +29,19 @@ readline.question(question.join('\n'), name => {
   fs.mkdirSync(`./src/views/${kebabCase}`);
 
   // Creates the files within the folder
+
+  console.group(`Files created in ./src/views/${kebabCase}`);
   files(camelCase).forEach(({ extension, content, fileName }) => {
     fs.writeFile(
       `./src/views/${kebabCase}/${fileName || camelCase}.${extension}`,
       content || '',
       err => {
         if (err) throw err;
-        console.log(
-          `The file ${fileName || camelCase}.${extension} has been written`
-        );
+        console.log(`${fileName || camelCase}.${extension}`);
       }
     );
   });
+  console.groupEnd();
 
   readline.close();
 });
