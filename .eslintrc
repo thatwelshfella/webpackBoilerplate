@@ -23,13 +23,14 @@
   },
   "plugins": ["react"],
   "rules": {
+    "import/order": 0,
+    "import/prefer-default-export": 0,
     "react/self-closing-comp": [
       "error",
       {
         "component": true
       }
     ],
-    "import/order": 0,
     "no-underscore-dangle": 0,
     "no-plusplus": 0,
     "react/jsx-props-no-spreading": 0,

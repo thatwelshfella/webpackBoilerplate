@@ -6,7 +6,7 @@
   "scripts": {
     "start": "webpack-dev-server --progress --config=./config/webpack.config.js",
     "build": "webpack --mode production",
-    "test": "jest --watchAll --config=./jest.config.js",
+    "test": "jest --watchAll --config=./jest.config.json",
     "cv": "node ./scripts/create-view.js",
     "cc": "node ./scripts/create-component.js"
   },

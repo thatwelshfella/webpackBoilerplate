@@ -16,7 +16,7 @@
     "!**/assets/**",
     "!**/scripts/**"
   ],
-  "coveragePathIgnorePatterns": ["/node_modules"],
+  "coveragePathIgnorePatterns": ["/node_modules", "./intialState"],
   "coverageThreshold": {
     "global": {
       "branches": 80,
@@ -28,8 +28,7 @@
   "coverageDirectory": "<rootDir>/dashboard/unit-tests/",
   "displayName": { "name": "peopleSearch", "color": "red" },
   "moduleNameMapper": {
-    "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$":
-      "<rootDir>/tests/fileMock.js",
+    "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/tests/fileMock.js",
     "\\.(css|less)$": "<rootDir>/tests/styleMock.js"
   },
   "snapshotSerializers": ["<rootDir>/node_modules/enzyme-to-json/serializer"]
