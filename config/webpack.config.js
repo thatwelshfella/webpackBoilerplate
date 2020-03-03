@@ -1,6 +1,7 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const alias = require('./alias')
 
 const isDevelopment = process.env.NODE_ENV === 'development';
 
@@ -31,9 +32,7 @@ module.exports = {
   resolve: {
     modules: ['src', 'node_modules'],
     extensions: ['.js', '.jsx', '.less', '.scss'],
-    alias: {
-      'react-dom': '@hot-loader/react-dom',
-    },
+    alias
   },
   module: {
     rules: [
