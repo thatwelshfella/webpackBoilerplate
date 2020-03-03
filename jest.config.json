@@ -19,14 +19,13 @@
   "coveragePathIgnorePatterns": ["/node_modules", "./intialState"],
   "coverageThreshold": {
     "global": {
-      "branches": 80,
-      "functions": 80,
-      "lines": 80,
+      "branches": 100,
+      "functions": 100,
+      "lines": 100,
       "statements": -10
     }
   },
   "coverageDirectory": "<rootDir>/dashboard/unit-tests/",
-  "displayName": { "name": "peopleSearch", "color": "red" },
   "moduleNameMapper": {
     "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/tests/fileMock.js",
     "\\.(css|less)$": "<rootDir>/tests/styleMock.js"
