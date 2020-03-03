@@ -1,11 +1,12 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import App from './App';
+import { AppView } from './App';
+import { shallow } from 'enzyme';
 
 describe('@render', () => {
+  const requiredProps = {
+    title: 'webpack boiler',
+  };
   it('renders without crashing', () => {
-    const div = document.createElement('div');
-    ReactDOM.render(<App />, div);
-    ReactDOM.unmountComponentAtNode(div);
+    expect(shallow(<AppView {...requiredProps} />)).toMatchSnapshot();
   });
 });

@@ -1,13 +1,23 @@
 import React from 'react';
-import { hot } from 'react-hot-loader/root';
+import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
+
 import './App.less';
 
-const App = () => {
-  return (
-    <div className="app">
-      <h1>Boilerplate loaded successfully</h1>
-    </div>
-  );
+const App = ({ title }) => {
+  return <div className="app">{title}</div>;
 };
 
-export default hot(App);
+App.propTypes = {
+  title: PropTypes.string.isRequired,
+};
+
+const mapStateToProps = state => {
+  return {
+    title: state.title,
+  };
+};
+
+export { App as AppView };
+
+export default connect(mapStateToProps, null)(App);
