@@ -18,7 +18,7 @@ const MiniCssExtractPluginConfig = new MiniCssExtractPlugin({
 });
 
 module.exports = {
-  entry: ['react-hot-loader/patch', './src/index.jsx'],
+  entry: [ './src/index.jsx'],
   mode: 'development',
   target: 'web',
   output: {

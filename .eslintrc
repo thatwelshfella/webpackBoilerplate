@@ -21,7 +21,9 @@
     "ecmaVersion": 2018,
     "sourceType": "module"
   },
-  "plugins": ["react"],
+  "plugins": [
+    "react"
+  ],
   "rules": {
     "import/order": 0,
     "import/prefer-default-export": 0,
@@ -35,5 +37,12 @@
     "no-plusplus": 0,
     "react/jsx-props-no-spreading": 0,
     "react/jsx-wrap-multilines": 0
+  },
+  "settings": {
+    "import/resolver": {
+      "webpack": {
+        "config": "./config/webpack.config.js"
+      }
+    }
   }
 }
