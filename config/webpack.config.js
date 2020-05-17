@@ -18,7 +18,7 @@ const MiniCssExtractPluginConfig = new MiniCssExtractPlugin({
 });
 
 module.exports = {
-  entry: [ './src/index.jsx'],
+  entry: [ './src/Index.jsx'],
   mode: 'development',
   target: 'web',
   output: {
