@@ -13,8 +13,12 @@ Webpack update 10/07/2020
 - Added .DS_store tp git ignore
 - Deleted scripts folder
 
+Webpack updated 02/03/2021
+
+- Testing moved to react testing library
+- Added .nvmrc to use node 12
+
 ## TODO
 
 - Update webpack-server-dev when new version is available
-- Add global jest files
 - Fix alias file
