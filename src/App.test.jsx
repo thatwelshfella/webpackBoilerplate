@@ -1,12 +1,13 @@
 import React from 'react';
-import { AppView } from './App';
-import { shallow } from 'enzyme';
+import App from './App';
+import { render } from '../tests/utils';
 
-describe('@render', () => {
-  const requiredProps = {
-    title: 'webpack boiler',
-  };
-  it('renders without crashing', () => {
-    expect(shallow(<AppView {...requiredProps} />)).toMatchSnapshot();
+describe('<App />', () => {
+  it('should render by default', () => {
+    const { getByText } = render(<App />, {
+      initialState: { title: 'webpack boilerplate' },
+    });
+
+    expect(getByText('webpack boilerplate')).toBeInTheDocument();
   });
 });

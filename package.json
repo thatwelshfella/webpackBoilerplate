@@ -11,9 +11,9 @@
     "cc": "node ./scripts/create-component.js"
   },
   "dependencies": {
-    "enzyme": "^3.10.0",
-    "enzyme-adapter-react-16": "^1.15.1",
-    "enzyme-to-json": "^3.4.4",
+    "@testing-library/jest-dom": "^5.11.9",
+    "@testing-library/react": "^11.2.5",
+    "@testing-library/user-event": "^12.8.1",
     "eslint-config-prettier": "^6.11.0",
     "eslint-import-resolver-webpack": "^0.12.1",
     "eslint-plugin-jest": "^23.13.1",
@@ -47,6 +47,7 @@
     "less-loader": "^6.1.0",
     "mini-css-extract-plugin": "^0.9.0",
     "node-sass": "^4.14.1",
+    "redux-mock-store": "^1.5.4",
     "sass-loader": "^8.0.2",
     "style-loader": "^1.2.1",
     "webpack-dev-server": "^3.11.0"

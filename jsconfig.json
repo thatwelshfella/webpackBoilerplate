@@ -5,5 +5,5 @@
     "paths": {
       "Src/*": ["src/*"]
     }
-  }
+  },"exclude": ["node_modules"]
 }
