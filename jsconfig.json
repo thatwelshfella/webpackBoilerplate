@@ -1,9 +1,10 @@
 {
   "compilerOptions": {
     "target": "es6",
-    "baseUrl": "./",
+    "baseUrl": "./",  
     "paths": {
-      "Src/*": ["src/*"]
+      "Src/*": ["src/*"],
+      "Redux/*":["src/redux/*"]
     }
   },"exclude": ["node_modules"]
 }
