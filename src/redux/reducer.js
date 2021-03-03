@@ -8,3 +8,5 @@ const reducer = (state = InitialState, { payload, type }) => {
 };
 
 export default reducer;
+
+export const aliases = 'aliases work!';

@@ -19,8 +19,8 @@ Webpack updated 02/03/2021
 - Added .nvmrc to use node 12
 - Bump npm packages to latest
 - Updated the webpack config for webpack 5
+- Alias file updated
 
 ## TODO
 
 - Fix webpack build
-- Fix alias file

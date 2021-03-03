@@ -9,5 +9,6 @@ describe('<App />', () => {
     });
 
     expect(getByText('webpack boilerplate')).toBeInTheDocument();
+    expect(getByText('aliases work!')).toBeInTheDocument();
   });
 });
