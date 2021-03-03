@@ -1,7 +1,8 @@
 const path = require('path');
+const alias = require('./alias');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const alias = require('./alias')
+const webpack = require('webpack');
 
 const isDevelopment = process.env.NODE_ENV === 'development';
 
@@ -17,22 +18,25 @@ const MiniCssExtractPluginConfig = new MiniCssExtractPlugin({
   chunkFilename: isDevelopment ? '[id].css' : '[id].[hash].css',
 });
 
+const hotReload = new webpack.HotModuleReplacementPlugin();
+
 module.exports = {
-  entry: [ './src/Index.jsx'],
+  entry: ['./src/Index.jsx'],
   mode: 'development',
   target: 'web',
   output: {
-    path: path.resolve(__dirname, 'build'),
     publicPath: '/',
     filename: 'bundle.js',
+    path: path.resolve(__dirname, 'build'),
   },
   devServer: {
+    port: 3000,
     contentBase: '../dist',
   },
   resolve: {
+    alias,
     modules: ['src', 'node_modules'],
     extensions: ['.js', '.jsx', '.less', '.scss'],
-    alias
   },
   module: {
     rules: [
@@ -62,38 +66,14 @@ module.exports = {
       },
       {
         test: /\.module\.s(a|c)ss$/,
-        loader: [
-          isDevelopment ? 'style-loader' : MiniCssExtractPlugin.loader,
-          {
-            loader: 'css-loader',
-            options: {
-              modules: true,
-              sourceMap: isDevelopment,
-            },
-          },
-          {
-            loader: 'sass-loader',
-            options: {
-              sourceMap: isDevelopment,
-            },
-          },
-        ],
+        use: ['style-loader', 'css-loader', 'sass-loader'],
       },
       {
         test: /\.s(a|c)ss$/,
         exclude: /\.module.(s(a|c)ss)$/,
-        loader: [
-          isDevelopment ? 'style-loader' : MiniCssExtractPlugin.loader,
-          'css-loader',
-          {
-            loader: 'sass-loader',
-            options: {
-              sourceMap: isDevelopment,
-            },
-          },
-        ],
+        use: ['style-loader', 'css-loader', 'sass-loader'],
       },
     ],
   },
-  plugins: [HtmlWebpackPluginConfig, MiniCssExtractPluginConfig],
+  plugins: [HtmlWebpackPluginConfig, MiniCssExtractPluginConfig, hotReload],
 };

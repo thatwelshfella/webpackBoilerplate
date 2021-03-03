@@ -17,8 +17,10 @@ Webpack updated 02/03/2021
 
 - Testing moved to react testing library
 - Added .nvmrc to use node 12
+- Bump npm packages to latest
+- Updated the webpack config for webpack 5
 
 ## TODO
 
-- Update webpack-server-dev when new version is available
+- Fix webpack build
 - Fix alias file
