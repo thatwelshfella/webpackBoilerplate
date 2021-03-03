@@ -1,26 +1,20 @@
-# Webpack Boilerplate
+# Webpack boilerplate
 
-First webpack config created 29/11/2019
+A basic webpack template to get an app up and running quickly.
 
-- Webpack dev config created
-- Jest & enzyme config created
-- Boiler plated react app created (app and index)
-- My preferred prettier config added
+```shell
+npm install/yarn install
 
-Webpack update 10/07/2020
+npm start/yarn start
+```
 
-- Updated jest config to ignore redux folder
-- Added .DS_store tp git ignore
-- Deleted scripts folder
+---
 
-Webpack updated 02/03/2021
+## Tech stack
 
-- Testing moved to react testing library
-- Added .nvmrc to use node 12
-- Bump npm packages to latest
-- Updated the webpack config for webpack 5
-- Alias file updated
-
-## TODO
-
-- Fix webpack build
+```
+Webpack v5
+Redux
+Less styling
+React testing library
+```
