@@ -14,7 +14,7 @@ npm start/yarn start
 
 ```
 Webpack v5
-Redux
+Redux toolkit
 Less styling
 React testing library
 ```

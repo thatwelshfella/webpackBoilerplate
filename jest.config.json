@@ -13,8 +13,7 @@
     "!**/src/Index.(js|jsx)",
     "!**/tests/**",
     "!**/assets/**",
-    "!**/scripts/**",
-    "!src/redux/**"
+    "!**/scripts/**"
   ],
   "coveragePathIgnorePatterns": ["/node_modules", "./initialState"],
   "coverageThreshold": {
@@ -32,5 +31,5 @@
     "^Redux(.*)$": "<rootDir>/src/redux$1",
     "^Src(.*)$": "<rootDir>/src$1"
   },
-  "setupFilesAfterEnv": ["./src/setupTest.js"]
+  "setupFilesAfterEnv": ["./setupTest.js"]
 }

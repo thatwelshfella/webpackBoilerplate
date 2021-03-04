@@ -1,12 +1,9 @@
-import InitialState from '../initialState';
+import { configureStore } from '@reduxjs/toolkit';
 
-const reducer = (state = InitialState, { payload, type }) => {
-  switch (type) {
-    default:
-      return state;
-  }
-};
+import { reducer as uiStateReducer } from 'Redux/uiState';
 
-export default reducer;
+const store = configureStore({
+  reducer: { uiState: uiStateReducer },
+});
 
-export const aliases = 'aliases work!';
+export default store;

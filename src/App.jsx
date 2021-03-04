@@ -1,16 +1,15 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-import { aliases } from 'Redux/reducer';
+import { uiStateSelectors } from 'Redux/uiState';
 
 import './App.less';
 
 const App = () => {
-  const title = useSelector(state => state.title);
+  const title = useSelector(uiStateSelectors.getTitle);
 
   return (
     <div className="app">
       <h1>{title}</h1>
-      <h2>{aliases}</h2>
     </div>
   );
 };

@@ -25,6 +25,7 @@
 03/03/2021
 
 - Updated js config to show imports from node_modules
+- now using redux toolkit
 
 ## TODO
 
