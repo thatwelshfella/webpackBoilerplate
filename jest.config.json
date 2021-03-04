@@ -29,7 +29,8 @@
     "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/tests/fileMock.js",
     "\\.(css|less)$": "<rootDir>/tests/styleMock.js",
     "^Redux(.*)$": "<rootDir>/src/redux$1",
-    "^Src(.*)$": "<rootDir>/src$1"
+    "^Src(.*)$": "<rootDir>/src$1",
+    "^Tests(.*)$": "<rootDir>/tests$1"
   },
   "setupFilesAfterEnv": ["./setupTest.js"]
 }

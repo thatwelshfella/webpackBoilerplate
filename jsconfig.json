@@ -4,7 +4,10 @@
     "baseUrl": ".",  
     "paths": {
       "Src/*": ["src/*"],
-      "Redux/*":["src/redux/*"]
+      "Redux/*":["src/redux/*"],
+      "Tests/*": [
+        "tests/*"
+      ],
     },
     "moduleResolution": "node"
   },"exclude": ["node_modules"],
