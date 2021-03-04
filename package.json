@@ -6,9 +6,7 @@
   "scripts": {
     "start": "webpack serve --progress --config=./config/webpack.config.js",
     "build": "webpack --mode production",
-    "test": "jest --watchAll --config=./jest.config.json",
-    "cv": "node ./scripts/create-view.js",
-    "cc": "node ./scripts/create-component.js"
+    "test": "jest --watchAll --config=./jest.config.json"
   },
   "dependencies": {
     "@reduxjs/toolkit": "^1.5.0",
