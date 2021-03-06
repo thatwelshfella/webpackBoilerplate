@@ -53,6 +53,11 @@ module.exports = {
         use: [{ loader: 'html-loader' }],
       },
       {
+        test: /\.css$/i,
+        loader: 'css-loader',
+      },
+
+      {
         test: /\.less$/,
         exclude: /node_modules/,
         use: [
@@ -62,7 +67,7 @@ module.exports = {
         ],
       },
       {
-        test: /\.png$/,
+        test: /\.(jpg|jpeg|png|woff|woff2|eot|ttf|svg)$/,
         exclude: '/node_modules',
         loader: 'url-loader',
       },
@@ -73,7 +78,11 @@ module.exports = {
       {
         test: /\.s(a|c)ss$/,
         exclude: /\.module.(s(a|c)ss)$/,
-        use: ['style-loader', 'css-loader', 'sass-loader'],
+        use: [
+          { loader: 'style-loader' },
+          { loader: 'css-loader' },
+          { loader: 'sass-loader' },
+        ],
       },
     ],
   },
